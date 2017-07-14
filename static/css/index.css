@@ -9,16 +9,20 @@ a {
   text-decoration: none;
 }
 
+strong {
+  font-weight: bold;
+}
 /* nav */
 
 nav {
+  box-sizing: border-box;
   position: fixed;
   z-index: 1;
   top: 0;
-  height: 3em;
+  height: 5em;
   width: 100%;
   background-color: #fff;
-  padding: 1em;
+  padding: 1em 2em;
   line-height: 3em;
 }
 
@@ -30,10 +34,12 @@ nav > h1 {
   height: 100%;
 }
 
-nav > p.about {
+ nav > h3.about {
   font-size: 1em;
   position: relative;
   float: left;
+  width: 25%;
+  text-align: right;
 }
 
 /* main */
@@ -45,22 +51,76 @@ main {
 }
 
 div.content-wrapper {
-  padding: 0 2em;
+  margin: 0 auto;
+  width: 90%;
 }
 
+/* images */
+
 div.image-wrapper {
-  width: auto;
-  padding: 1em;
+  padding: 1em 0;
   margin-bottom: 3em;
 }
 
-.image-wrapper > img.portfolio-img {
-  margin: 0 auto;
-  max-width: 300px;
+.image-wrapper img.portfolio-img {
   min-width: 250px;
-  min-height: 250px;
+  opacity: 1;
+	transition: opacity 0.3s;
 }
 
-.image-wrapper > img.portfolio-img.blank {
+img.portfolio-img[data-src] {
+  opacity: 0;
+}
+
+.image-wrapper.skeleton {
   background-color: #999;
+}
+
+@media screen and (min-width: 300px) and (max-width: 500px) {
+  .image-wrapper {
+    width: 250px;
+  }
+  .image-wrapper img.portfolio-img {
+    max-width: 250px;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 800px) {
+  .image-wrapper {
+    width: 500px;
+  }
+  .image-wrapper img.portfolio-img {
+    max-width: 500px;
+  }
+}
+
+@media screen and (min-width: 801px) {
+  .image-wrapper {
+    width: 600px;
+  }
+  .image-wrapper img.portfolio-img {
+    max-width: 600px;
+    max-height: 650px;
+  }
+}
+
+
+/* about  */
+
+main#about p {
+  margin-bottom: 1em;
+}
+
+main#about h3 {
+  margin-bottom: 1em;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+main#about ul {
+  margin-bottom: 1em;
+}
+
+main#about ul > li {
+  margin-bottom: 1em;
 }

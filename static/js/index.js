@@ -2,7 +2,7 @@
 
 const lazyLoad = (img) => {
   img.src = img.dataset.src;
-  img.classList.remove("blank");
+  img.onload = event => img.removeAttribute('data-src');
 }
 
 document.addEventListener("DOMContentLoaded", (event) => {

@@ -1,7 +1,9 @@
 {{ partial "header" . }} {{ partial "nav" . }}
 
-<main>
-  {{ .Content }}
+<main id="{{ lower .Title }}">
+  <div class="content-wrapper">
+    {{ .Content }}
+  </div>
 </main>
 
 {{ partial "footer" . }}

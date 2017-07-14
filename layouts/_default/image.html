@@ -1,9 +1,13 @@
 <noscript>
   <div class="image-wrapper">
-    <img src="{{.Params.src}}" alt="{{.Params.alt}}">
+    <a href="{{ .Permalink }}">
+      <img class="portfolio-img" src="{{.Params.src}}" alt="{{.Params.alt}}" />
+    </a>
   </div>
 </noscript>
 
 <div class="image-wrapper">
-  <img class="portfolio-img blank" src="" data-src="{{.Params.src}}" alt="{{.Params.alt}}">
+  <a href="{{ .Permalink }}">
+    <img class="portfolio-img" src="" data-src="{{.Params.src}}" alt="{{.Params.alt}}" />
+  </a>
 </div>
