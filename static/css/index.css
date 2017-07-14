@@ -27,6 +27,8 @@ nav {
 }
 
 nav > h1 {
+  box-sizing: border-box;
+  padding-right: 1em;
   font-size: 2em;
   position: relative;
   width: 75%;
@@ -35,12 +37,21 @@ nav > h1 {
 }
 
  nav > h3.about {
+  box-sizing: border-box;
+  padding-right: 1em;
   font-size: 1em;
   position: relative;
   float: left;
   width: 25%;
   text-align: right;
 }
+
+@media screen and (min-width: 775px) {
+  nav > h3.about {
+   font-size: 2em;
+  }
+}
+
 
 /* main */
 
@@ -59,7 +70,7 @@ div.content-wrapper {
 
 div.image-wrapper {
   padding: 1em 0;
-  margin-bottom: 3em;
+  margin: 0 auto 1em auto;
 }
 
 .image-wrapper img.portfolio-img {
@@ -78,10 +89,10 @@ img.portfolio-img[data-src] {
 
 @media screen and (min-width: 300px) and (max-width: 500px) {
   .image-wrapper {
-    width: 250px;
+    width: 300px;
   }
   .image-wrapper img.portfolio-img {
-    max-width: 250px;
+    max-width: 300px;
   }
 }
 
@@ -94,7 +105,7 @@ img.portfolio-img[data-src] {
   }
 }
 
-@media screen and (min-width: 801px) {
+@media screen and (min-width: 801px) and (max-width: 1000px){
   .image-wrapper {
     width: 600px;
   }
@@ -104,6 +115,15 @@ img.portfolio-img[data-src] {
   }
 }
 
+@media screen and (min-width: 1001px) {
+  .image-wrapper {
+    width: 800px;
+  }
+  .image-wrapper img.portfolio-img {
+    max-width: 800px;
+    max-height: 650px;
+  }
+}
 
 /* about  */
 
