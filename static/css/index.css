@@ -1,0 +1,66 @@
+/* general */
+
+html, body {
+  font-family: monospace;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+/* nav */
+
+nav {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  height: 3em;
+  width: 100%;
+  background-color: #fff;
+  padding: 1em;
+  line-height: 3em;
+}
+
+nav > h1 {
+  font-size: 2em;
+  position: relative;
+  width: 75%;
+  float: left;
+  height: 100%;
+}
+
+nav > p.about {
+  font-size: 1em;
+  position: relative;
+  float: left;
+}
+
+/* main */
+
+main {
+  position: relative;
+  margin-top: 5em;
+  width: 100%;
+}
+
+div.content-wrapper {
+  padding: 0 2em;
+}
+
+div.image-wrapper {
+  width: auto;
+  padding: 1em;
+  margin-bottom: 3em;
+}
+
+.image-wrapper > img.portfolio-img {
+  margin: 0 auto;
+  max-width: 300px;
+  min-width: 250px;
+  min-height: 250px;
+}
+
+.image-wrapper > img.portfolio-img.blank {
+  background-color: #999;
+}
