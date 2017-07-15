@@ -6,4 +6,5 @@ alt: "{{ .TranslationBaseName }}"
 sequence: 0
 type: "image"
 layout: "single"
+orientation: "vertical"
 ---

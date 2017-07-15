@@ -2,6 +2,7 @@
 
 body {
   font-family: monospace;
+  width: 100%;
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -79,64 +80,78 @@ div.image-wrapper {
 .image-wrapper img.portfolio-img {
   opacity: 1;
 	transition: opacity 0.3s;
+  width: 100%;
 }
 
 img.portfolio-img[data-src] {
   height:0px;
-  width: 100%;
   opacity: 0;
 }
 
-div.placeholder {
-  height: 400px;
-  width: 100%;
+.placeholder {
   background-color: #999;
 }
 
-@media screen and (min-width: 300px) and (max-width: 500px) {
+
+@media screen and (max-width: 400px) {
+  .image-wrapper {
+    width: 250px;
+  }
+  img.portfolio-img {
+    max-width: 250px;
+  }
+  .placeholder.vertical {
+    height: 375px;
+  }
+  .placeholder.horizontal {
+    height: 166.66px;
+  }
+}
+
+@media screen and (min-width: 401px) and (max-width: 600px) {
   .image-wrapper {
     width: 300px;
   }
-  .image-wrapper img.portfolio-img {
+  img.portfolio-img {
     max-width: 300px;
+  }
+  .placeholder.vertical {
+    height: 450px;
+  }
+  .placeholder.horizontal {
+    height: 200px;
   }
 }
 
-@media screen and (min-width: 600px) and (max-width: 800px) {
+@media screen and (min-width: 601px) and (max-width: 1100px) {
   .image-wrapper {
     width: 500px;
   }
-  .image-wrapper img.portfolio-img {
+  img.portfolio-img {
     max-width: 500px;
   }
+  .placeholder.vertical {
+    height: 750px;
+  }
+  .placeholder.horizontal {
+    height: 333.33px;
+  }
 }
 
-@media screen and (min-width: 801px) and (max-width: 1000px){
+@media screen and (min-width: 1101px) {
   .image-wrapper {
-    width: 600px;
+    width: 750px;
   }
-  .image-wrapper img.portfolio-img {
-    max-width: 600px;
-    max-height: 650px;
+  img.portfolio-img {
+    max-width: 750px;
   }
-  div.placeholder {
+  .placeholder.vertical {
+     height: 1125px;
+  }
+  .placeholder.horizontal {
     height: 500px;
   }
 }
-
-@media screen and (min-width: 1001px) {
-  .image-wrapper {
-    width: 800px;
-  }
-  .image-wrapper img.portfolio-img {
-    max-width: 800px;
-    max-height: 650px;
-  }
-  div.placeholder {
-    height: 500px;
-  }
-}
-
 /* about  */
 
 main#about p {
