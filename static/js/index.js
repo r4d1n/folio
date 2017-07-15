@@ -5,9 +5,7 @@ const lazyLoad = img => {
   img.setAttribute('src', img.getAttribute('data-src'));
   img.onload = event => {
     img.removeAttribute('data-src');
-    if (img.nextElementSibling) {
-      img.parentNode.removeChild(img.nextElementSibling);
-    }
+    img.parentNode.parentNode.classList.remove("placeholder"); // parent of parent, because of the <a>
   }
 }
 
