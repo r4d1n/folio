@@ -1,7 +1,9 @@
 /* general */
 
-html, body {
+body {
   font-family: monospace;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 a {
@@ -15,15 +17,16 @@ strong {
 /* nav */
 
 nav {
+  height: 5em;
+  width: 100%;
+  line-height: 3em;
+  max-width: 1000px;
+  padding: 1em 2em;
+  background-color: #fff;
   box-sizing: border-box;
   position: fixed;
   z-index: 1;
   top: 0;
-  height: 5em;
-  width: 100%;
-  background-color: #fff;
-  padding: 1em 2em;
-  line-height: 3em;
 }
 
 nav > h1 {
@@ -74,16 +77,19 @@ div.image-wrapper {
 }
 
 .image-wrapper img.portfolio-img {
-  min-width: 250px;
   opacity: 1;
 	transition: opacity 0.3s;
 }
 
 img.portfolio-img[data-src] {
+  height:0px;
+  width: 100%;
   opacity: 0;
 }
 
-.image-wrapper.skeleton {
+div.placeholder {
+  height: 400px;
+  width: 100%;
   background-color: #999;
 }
 
@@ -113,6 +119,9 @@ img.portfolio-img[data-src] {
     max-width: 600px;
     max-height: 650px;
   }
+  div.placeholder {
+    height: 500px;
+  }
 }
 
 @media screen and (min-width: 1001px) {
@@ -122,6 +131,9 @@ img.portfolio-img[data-src] {
   .image-wrapper img.portfolio-img {
     max-width: 800px;
     max-height: 650px;
+  }
+  div.placeholder {
+    height: 500px;
   }
 }
 
