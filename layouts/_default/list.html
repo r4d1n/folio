@@ -1,0 +1,9 @@
+{{ partial "header" . }} {{ partial "nav" . }}
+
+<main>
+  <div class="content-wrapper">
+    {{ range .Paginator.Pages.ByParam "sequence" }} {{ .Render "image"}} {{ end }}
+  </div>
+</main>
+
+{{ partial "footer" . }}

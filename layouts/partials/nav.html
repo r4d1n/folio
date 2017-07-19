@@ -1,4 +1,9 @@
 <nav>
   <h1 id="title"><a href="/">{{.Site.Title}}</a></h1>
-  <h3 class="about"><a href="/about">about</a></h3>
+  <ul id="menu">
+    {{ $currentPage := . }} {{ range .Site.Menus.main }}
+    <li><a class="sidebar-nav-item" {{if or ($currentPage.IsMenuCurrent " main " .) ($currentPage.HasMenuCurrent "main " .) }}
+        active{{end}} href="{{.URL}} ">{{ .Name }}</a></li> {{ end }}
+    <li class="about"><a href="/about">about</a></li>
+  </ul>
 </nav>
