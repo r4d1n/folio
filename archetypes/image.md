@@ -1,7 +1,7 @@
 ---
 title: "{{ .TranslationBaseName }}"
 date: {{ .Date }}
-src: "/img/{{ .TranslationBaseName }}.jpg"
+src: "/img/{{ .Dir }}{{ .TranslationBaseName }}.jpg"
 alt: "{{ .TranslationBaseName }}"
 sequence: 0
 type: "image"

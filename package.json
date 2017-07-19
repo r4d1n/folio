@@ -1,0 +1,25 @@
+{
+  "name": "folio",
+  "version": "0.1.0",
+  "description": "A Hugo theme for making clean art portfolio websites.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/r4d1n/folio.git"
+  },
+  "author": "Jared Radin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/r4d1n/folio/issues"
+  },
+  "homepage": "https://github.com/r4d1n/folio#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-gm": "0.0.8",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-shell": "^0.6.3"
+  }
+}
