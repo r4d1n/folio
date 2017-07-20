@@ -1,5 +1,6 @@
-<nav>
+<nav id="main-nav">
   <h1 id="title"><a href="/">{{.Site.Title}}</a></h1>
+  <h3 id="menu-toggle">Menu</h3>
   <ul id="menu">
     {{ $currentPage := . }} {{ range .Site.Menus.main }}
     <li><a class="sidebar-nav-item" {{if or ($currentPage.IsMenuCurrent " main " .) ($currentPage.HasMenuCurrent "main " .) }}

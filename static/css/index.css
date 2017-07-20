@@ -41,14 +41,12 @@ nav > h1 {
   height: 100%;
 }
 
- nav h3 {
-  box-sizing: border-box;
-  padding-right: 1em;
-  font-size: 1em;
+nav h3#menu-toggle {
+  height: 100%;
+  float: right;
   position: relative;
-  float: left;
-  width: 25%;
-  text-align: right;
+  box-sizing: border-box;
+  font-size: 1em;
 }
 
 nav ul {
@@ -63,9 +61,45 @@ nav ul > li {
   padding: 0 1em;
 }
 
+@media screen and (max-width: 600px) {
+  nav > h1 {
+    font-size: 1em;
+  }
+}
+
 @media screen and (min-width: 775px) {
-  nav  h3 {
+  nav h3 {
    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  nav ul#menu {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.2s;
+  }
+
+  nav ul#menu.open {
+    visibility: visible;
+    opacity: 1;
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    margin-top: 4em;
+    min-height: 150px;
+  }
+
+  nav ul#menu.open > li {
+    float: none;
+    background-color: #fff;
+    padding-bottom: 1em;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  nav h3#menu-toggle {
+    display: none;
   }
 }
 
@@ -80,6 +114,7 @@ main {
 div.content-wrapper {
   margin: 0 auto;
   width: 90%;
+  padding-top: 0.25em;
 }
 
 /* images */
@@ -110,10 +145,10 @@ div.image-wrapper {
     width: 250px;
   }
   .vertical {
-    height: 375px;
+    min-height: 300px;
   }
   .horizontal {
-    height: 166.66px;
+    min-height: 150px;
   }
 }
 
@@ -122,10 +157,10 @@ div.image-wrapper {
     width: 300px;
   }
   .vertical {
-    height: 450px;
+    min-height: 350px;
   }
   .horizontal {
-    height: 200px;
+    min-height: 200px;
   }
 }
 
@@ -134,10 +169,10 @@ div.image-wrapper {
     width: 500px;
   }
   .vertical {
-    height: 750px;
+    min-height: 600px;
   }
   .horizontal {
-    height: 333.33px;
+    min-height: 333.33px;
   }
 }
 
@@ -146,10 +181,10 @@ div.image-wrapper {
     width: 750px;
   }
   .vertical {
-     height: 1125px;
+     min-height: 800ox;
   }
   .horizontal {
-    height: 500px;
+    min-height: 500px;
   }
 }
 
@@ -166,7 +201,6 @@ div.image-wrapper {
   top: 50%;
   left: 0px;
 }
-
 
 @media screen and (max-width: 600px) {
   .image-wrapper.index-list-item .project-title {
