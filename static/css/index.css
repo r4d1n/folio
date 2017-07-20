@@ -86,9 +86,11 @@ div.content-wrapper {
 
 div.image-wrapper {
   margin: 3em auto;
+  position: relative;
 }
 
 .image-wrapper img {
+  z-index: 0;
   opacity: 1;
   transition: opacity 0.25s;
   width: 100%;
@@ -148,6 +150,28 @@ div.image-wrapper {
   }
   .horizontal {
     height: 500px;
+  }
+}
+
+/* index specific */
+.image-wrapper.index-list-item .project-title {
+  z-index: 2;
+  color: #fff;
+  font-size: 3em;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  margin-top: -75px;
+  position: absolute;
+  top: 50%;
+  left: 0px;
+}
+
+
+@media screen and (max-width: 600px) {
+  .image-wrapper.index-list-item .project-title {
+    margin-top: -30px;
+    font-size: 2em;
   }
 }
 
