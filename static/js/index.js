@@ -21,3 +21,11 @@ const imageLoadHandler = event => {
 
 document.addEventListener("DOMContentLoaded", imageLoadHandler);
 document.addEventListener("scroll", imageLoadHandler);
+
+// toggle mobile nav open/closed
+document.querySelector("nav#main-nav").addEventListener("click", e => {
+  if (e.target.id === "menu-toggle") {
+    e.stopPropagation();
+    document.querySelector("ul#menu").classList.toggle("open");
+  }
+});
