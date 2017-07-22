@@ -1,13 +1,13 @@
 <noscript>
   <div class="image-wrapper {{ .Params.orientation }}">
-    <a href="{{ .Permalink }}">
+    <a href="{{ .RelPermalink }}">
       <img class="portfolio-img" src="{{ .Params.src }}" alt="{{ .Params.alt }}" />
     </a>
   </div>
 </noscript>
 
 <div class="image-wrapper {{ .Params.orientation }} placeholder">
-  <a href="{{ .Permalink }}">
+  <a href="{{ .RelPermalink }}">
     <img class="portfolio-img" src="" data-src="{{ .Params.src }}" alt="{{ .Params.alt }}" />
   </a>
 </div>

@@ -6,14 +6,18 @@
     {{ range .Site.Sections }}
     <noscript>
       <div class="image-wrapper index-list-item {{ .Params.orientation }}">
-        <h1 class="project-title">{{ .Title }}</h1>
-        <a href="{{ .Permalink }}"><img class="portfolio-img" src="{{ .Params.cover_src }}" alt="{{ .Title }}" /></a>
+        <div class="title-wrapper">
+          <h1 class="project-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
+        </div>
+        <img class="portfolio-img" src="{{ .Params.cover_src }}" alt="{{ .Title }}" />
       </div>
     </noscript>
 
     <div class="image-wrapper index-list-item {{ .Params.orientation }} placeholder">
-      <h1 class="project-title">{{ .Title }}</h1>
-      <a href="{{ .Permalink }}"><img class="portfolio-img" src="" data-src="{{ .Params.cover_src }}" alt="{{ .Title }}" /></a>
+      <div class="title-wrapper">
+        <h1 class="project-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
+      </div>
+      <img class="portfolio-img" src="" data-src="{{ .Params.cover_src }}" alt="{{ .Title }}" />
     </div>
     {{ end }}
 
