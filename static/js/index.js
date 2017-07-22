@@ -23,7 +23,6 @@ document.addEventListener("DOMContentLoaded", imageLoadHandler);
 document.addEventListener("scroll", imageLoadHandler);
 
 // toggle mobile nav open/closed
-
 const navHandler = e => {
   e.stopPropagation();
   document.querySelector("ul#menu").classList.toggle("open");

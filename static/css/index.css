@@ -79,21 +79,21 @@ nav ul > li {
     opacity: 0;
     transition: visibility 0s, opacity 0.2s;
     top: 4em;
+    padding: 0;
   }
 
   nav ul#menu.open {
     visibility: visible;
     opacity: 1;
-    position: relative;
+    position: absolute;
     width: 100%;
     background-color: #fff;
-    min-height: 150px;
   }
 
   nav ul#menu.open > li {
     float: none;
     background-color: #fff;
-    padding-bottom: 1em;
+    padding: 0 2em 1em 2em;
   }
 
   nav ul#menu.open > li > a {
