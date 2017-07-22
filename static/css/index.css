@@ -145,10 +145,10 @@ div.image-wrapper {
     width: 250px;
   }
   .vertical {
-    height: 375px;
+    min-height: 300px;
   }
   .horizontal {
-    height: 166.66px;
+    min-height: 150px;
   }
 }
 
@@ -157,10 +157,10 @@ div.image-wrapper {
     width: 300px;
   }
   .vertical {
-    height: 450px;
+    min-height: 350px;
   }
   .horizontal {
-    height: 200px;
+    min-height: 200px;
   }
 }
 
@@ -169,10 +169,10 @@ div.image-wrapper {
     width: 500px;
   }
   .vertical {
-    height: 750px;
+    min-height: 600px;
   }
   .horizontal {
-    height: 333.33px;
+    min-height: 333.33px;
   }
 }
 
@@ -181,10 +181,10 @@ div.image-wrapper {
     width: 750px;
   }
   .vertical {
-     height: 1125px;
+     min-height: 800ox;
   }
   .horizontal {
-    height: 500px;
+    min-height: 500px;
   }
 }
 
