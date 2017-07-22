@@ -5,10 +5,10 @@ const shell = require('gulp-shell');
 const gm = require('gulp-gm');
 const imagemin = require('gulp-imagemin');
 const fs = require('fs');
-var exec = require('child_process').exec;
+const exec = require('child_process').exec;
 
-const PATH_TO_IMAGES = '../../static/unprocessed/';
-const IMG_DEST = '../../static/img/';
+const ORIGINAL_IMG_DIR = '../../static/unprocessed/';
+const STATIC_IMG_DIR = '../../static/img/';
 
 const DIMENSIONS = {
   vertical: {
@@ -35,7 +35,7 @@ const walkSync = (dir, filelist) => {
 };
 
 gulp.task('resize', _ => {
-  gulp.src(PATH_TO_IMAGES + '*/*.jpg')
+  gulp.src(ORIGINAL_IMG_DIR + '*/*.jpg')
     .pipe(gm((gmfile, done) => {
       gmfile.size((err, size) => {
         let orientation = size.height >= size.width ? 'vertical' : 'horizontal';
@@ -46,14 +46,14 @@ gulp.task('resize', _ => {
       })
     }))
     .pipe(imagemin())
-    .pipe(gulp.dest(IMG_DEST));
+    .pipe(gulp.dest(STATIC_IMG_DIR));
 });
 
 gulp.task('pages', _ => {
-  let jpegs = walkSync(PATH_TO_IMAGES)
+  let jpegs = walkSync(STATIC_IMG_DIR)
     .filter(f => f.match(/.jpg/))
     .map(j => {
-      let arr = j.replace(PATH_TO_IMAGES, '').split('/');
+      let arr = j.replace(STATIC_IMG_DIR, '').split('/');
       return {
         project: arr[0],
         image: arr[1]
