@@ -27,16 +27,14 @@ nav {
   background-color: #fff;
   box-sizing: border-box;
   position: fixed;
-  z-index: 1;
+  z-index: 5;
   top: 0;
 }
 
-nav > h1 {
+nav h1#title {
   box-sizing: border-box;
-  padding-right: 1em;
   font-size: 2em;
   position: relative;
-  width: 50%;
   float: left;
   height: 100%;
 }
@@ -45,15 +43,17 @@ nav h3#menu-toggle {
   height: 100%;
   float: right;
   position: relative;
+  text-align: right;
   box-sizing: border-box;
   font-size: 1em;
+  min-width: 75px;
 }
 
 nav ul {
   height: 100%;
-  width: 40%;
   position: absolute;
   right: 0;
+  padding-right: 2.5em;
 }
 
 nav ul > li {
