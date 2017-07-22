@@ -2,7 +2,7 @@
 
 <main>
   <div class="content-wrapper">
-    {{ range .Paginator.Pages.ByParam "sequence" }} {{ .Render "image"}} {{ end }}
+    {{ range .Data.Pages }} {{ .Render "image"}} {{ end }}
   </div>
 </main>
 
