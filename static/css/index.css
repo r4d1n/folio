@@ -225,12 +225,17 @@ div.image-wrapper {
 
 /* about  */
 
+main#about {
+  color: #666;
+  line-height: 1.5em;
+}
+
 main#about p {
-  font-size: 1.25em;
   margin-bottom: 1em;
 }
 
 main#about h3 {
+  color: #333;
   font-size: 1em;
   font-weight: bold;
   margin-bottom: 1em;
