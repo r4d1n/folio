@@ -7,13 +7,13 @@
     <noscript>
       <div class="image-wrapper index-list-item {{ .Params.orientation }}">
         <h1 class="project-title">{{ .Title }}</h1>
-        <a href="{{ .Permalink }}"><img class="portfolio-img" src="{{ .Params.cover_src }}" alt="{{ .Title }}" /></a>
+        <a href="{{ .RelPermalink }}"><img class="portfolio-img" src="{{ .Params.cover_src }}" alt="{{ .Title }}" /></a>
       </div>
     </noscript>
 
     <div class="image-wrapper index-list-item {{ .Params.orientation }} placeholder">
       <h1 class="project-title">{{ .Title }}</h1>
-      <a href="{{ .Permalink }}"><img class="portfolio-img" src="" data-src="{{ .Params.cover_src }}" alt="{{ .Title }}" /></a>
+      <a href="{{ .RelPermalink }}"><img class="portfolio-img" src="" data-src="{{ .Params.cover_src }}" alt="{{ .Title }}" /></a>
     </div>
     {{ end }}
 
