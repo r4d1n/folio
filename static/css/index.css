@@ -78,6 +78,7 @@ nav ul > li {
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s, opacity 0.2s;
+    top: 4em;
   }
 
   nav ul#menu.open {
@@ -86,7 +87,6 @@ nav ul > li {
     position: relative;
     width: 100%;
     background-color: #fff;
-    margin-top: 4em;
     min-height: 150px;
   }
 
@@ -94,6 +94,11 @@ nav ul > li {
     float: none;
     background-color: #fff;
     padding-bottom: 1em;
+  }
+
+  nav ul#menu.open > li > a {
+    display: inline-block;
+    width: 100%;
   }
 }
 
