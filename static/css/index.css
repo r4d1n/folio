@@ -170,7 +170,7 @@ div.image-wrapper {
   }
 }
 
-@media screen and (min-width: 601px) and (max-width: 1100px) {
+@media screen and (min-width: 601px) {
   .image-wrapper {
     width: 500px;
   }
@@ -179,18 +179,6 @@ div.image-wrapper {
   }
   .horizontal {
     min-height: 333.33px;
-  }
-}
-
-@media screen and (min-width: 1101px) {
-  .image-wrapper {
-    width: 750px;
-  }
-  .vertical {
-     min-height: 800ox;
-  }
-  .horizontal {
-    min-height: 500px;
   }
 }
 
