@@ -171,13 +171,12 @@ div.image-wrapper {
 }
 
 @media screen and (min-width: 601px) {
-  .image-wrapper {
-    width: 500px;
-  }
   .vertical {
+    width: 500px;
     min-height: 600px;
   }
   .horizontal {
+    width: 700px;
     min-height: 333.33px;
   }
 }
