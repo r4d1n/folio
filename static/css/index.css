@@ -206,7 +206,7 @@ div.image-wrapper {
 @media screen and (max-width: 600px) {
   .image-wrapper.index-list-item .project-title {
     margin-top: -30px;
-    font-size: 2em;
+    font-size: 1em;
   }
 }
 
