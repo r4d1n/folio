@@ -2,7 +2,7 @@
 
 <main>
   <div class="content-wrapper">
-    {{ range .Data.Pages.ByParam "sequence" }} {{ .Render "image"}} {{ end }}
+    {{ range sort (.Data.Pages.ByParam "sequence") "Params.sequence" "asc" }} {{ .Render "image"}} {{ end }}
   </div>
 </main>
 
