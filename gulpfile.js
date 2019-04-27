@@ -38,7 +38,7 @@ gulp.task('resize', _ => {
   gulp.src(ORIGINAL_IMG_DIR + '*/*.jpg')
     .pipe(gm((gmfile, done) => {
       gmfile.size((err, size) => {
-        let orientation = size.height >= size.width ? 'vertical' : 'horizontal';
+        let orientation = size && size.height >= size.width ? 'vertical' : 'horizontal';
         done(null, gmfile.resize(
           DIMENSIONS[orientation].width,
           DIMENSIONS[orientation].height
